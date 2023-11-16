@@ -1,0 +1,11 @@
+Receipt
+---------------------------
+Date: 2023-11-16 16:59:30
+User: Ivan Shevchenko
+Products:
+Milk - $78.0 x 10
+Bread - $90.0 x 20
+Tea - $95.75 x 40
+Apples Package - $40.99 x 30
+---------------------------
+Total: $7639.7

@@ -1,0 +1,8 @@
+1,Milk,78.0,10,Ferma,DIARY
+2,Bread,90.0,20,Kolosok,BAKERY
+3,Bread,90.0,20,Kolosok,BAKERY
+4,Tea,95.75,40,Lipton,BEVERAGES
+5,Salmon,299.0,10,Tridents,FISH
+6,Beef,255.0,15,Cargill,MEAT
+7,Apples,40.99,30,Dole,FRUITS
+8,Tomatoes,59.99,35,SanMarzano,VEGETABLES
