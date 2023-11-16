@@ -1,6 +1,8 @@
 import java.io.*;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class FileService {
@@ -13,12 +15,12 @@ public class FileService {
                     .filter(parts -> parts.length == 6)
                     .map(parts -> {
                         try {
-                            double price = Double.parseDouble(parts[2]);
-                            int quantity = Integer.parseInt(parts[3]);
-                            ProductType type = ProductType.valueOf(parts[5].toUpperCase());
-                            return new Product(parts[0], parts[1], price, quantity, parts[4], type);
-                        } catch (IllegalArgumentException | NumberFormatException e) {
-                            System.err.println("Error parsing numeric values in line: " + Arrays.toString(parts));
+                            double price = Double.parseDouble(parts[2].trim());
+                            int quantity = Integer.parseInt(parts[3].trim());
+                            ProductType type = ProductType.valueOf(parts[5].trim().toUpperCase());
+                            return new Product(parts[0].trim(), parts[1].trim(), price, quantity, parts[4].trim(), type);
+                        } catch (IllegalArgumentException e) {
+                            System.err.println("Error parsing numeric values or invalid enum in line: " + Arrays.toString(parts));
                             return null;
                         }
                     })

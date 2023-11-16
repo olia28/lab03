@@ -65,10 +65,4 @@ public class Product {
                 '}';
     }
 
-    public static List<Product> addPackageToSpecialProducts(List<Product> products) {
-        return products.stream()
-                .filter(p -> p.getType() == ProductType.FRUITS || p.getType() == ProductType.VEGETABLES)
-                .peek(p -> p.setName(p.getName() + " Package"))
-                .collect(Collectors.toList());
-    }
 }
